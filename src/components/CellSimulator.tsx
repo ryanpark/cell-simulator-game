@@ -1,14 +1,24 @@
 import { useState, useEffect } from 'react';
 import { Simulator, GameBoard, Buttons, Button, Wrapper, Cell } from './CellSimulatorStyles';
 
-const GRID = {
+type GridTypes = {
+    ROWS: number,
+    COLS: number,
+}
+
+type CellTypes = {
+    ALIVE: string,
+    DEAD: string,
+}
+
+const GRID: GridTypes = {
     ROWS: 24,
     COLS: 24,
 };
 
-const SPEED = 500;
+const SPEED: number = 500;
 
-const CELL_IS = {
+const CELL_IS: CellTypes = {
     ALIVE: 'alive',
     DEAD: 'dead',
 };
